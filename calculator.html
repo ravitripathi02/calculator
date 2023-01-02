@@ -48,12 +48,10 @@ input::-webkit-inner-spin-button
 * {
         padding: 0;
         margin: 0;
-        
+
     }
 body{
-    width:100%;
     background:linear-gradient(90deg,#755bea,#ff72c0);
-    
 }
 .dark-mode{
     background:linear-gradient(90deg,#535258,#ece0e7);
@@ -120,7 +118,7 @@ body{
     }
 
     .nav-right {
-        margin-right: 20px;
+        margin-right: 2px;
         margin-top: 15px;
         display: flex;
     }
@@ -465,23 +463,10 @@ button:active{
     display: none;
   }
   }
-  @media only screen and (max-width: 452px) {
+  @media only screen and (max-width: 500px) {
     .nav-left ul li{
         display: none;
     }
-      button{
-     border-radius: 25px;
-    box-shadow: 2px 2px 2px 2px;
-    background: wheat;
-    font-size: 20px;
-    border: 10px solid gainsboro;
-    outline: none;
-    color: rgb(80, 76, 76);
-    margin: 10px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-      }
     label {
         display: block;
         cursor: pointer;
@@ -629,20 +614,20 @@ button:active{
         padding-left: 20px;
     }
     .output{
-        width: 300px;
+        width: 380px;
     }
     #calc{
-        width:290px;
+        width:372px;
     }
     .block{
         margin-left: 8px;
-        width:290px;
+        width:372px;
     }
-/*     button{
+    button{
         font-size: 35px;
         width: 70px;
         height: 70px
-    } */
+    }
 }
 </style>
 <script>
@@ -659,7 +644,7 @@ button:active{
 </script>
 <body>
     <nav class="navigation">
-        <div class="nav-left"><em>VoiceCalc</em>
+        <div class="nav-left"><em>iCONverter</em>
           
             <ul>
                 <li><a id="act" class="active" href="file:///D:/website/index.html">Home</a></li>
@@ -674,11 +659,11 @@ button:active{
                     <div class="semi" id="out-btn">
                        <input onclick="myFunction()" type="checkbox" name="circle" class="circle" id="cir">
                       </div></li>
-                      <!-- <li>
+                      <li>
                     <form action="/search.html" method="get">
                         <input class="form-input" type="text" name="query" placeholder="Article Search">
                         <button1 class="btn">Search</button1>
-                </li> -->
+                </li>
             </ul>
             </form>
         </div>
@@ -704,7 +689,7 @@ button:active{
    <div class="calculator">
        <h1 class="cl"> <ul><li>C</li><li>a</li><li>l</li><li>c</li><li>u</li><li>l</li><li>a</li><li>t</li><li>o</li><li>r</li></ul><hr></h1>
        <div class="output">
-        <input type="text" name="calc" id="calc" disabled><br />
+        <input type="text" name="calc" id="calc"><br />
         <div class="block">
         <input type="text" name="screen" id="screen">
         <div class="speaker">
@@ -715,8 +700,8 @@ button:active{
     </div>
        <table>
            <tr>
-               <td><button>AC</button></td>
                <td><button>C</button></td>
+               <td><button>AC</button></td>
                 <td><button>.</button></td>
                 <td><button>+</button></td>
             </tr>
@@ -788,14 +773,6 @@ button:active{
        }
        if(message.includes('into')){
            message=message.replace('into','*');
-           console.log(message);
-       }
-       if(message.includes('plus')){
-           message=message.replace('plus','+');
-           console.log(message);
-       }
-       if(message.includes('divided by')){
-           message=message.replace('divided by','/');
            console.log(message);
        }
        if(message.includes('bracket open')){
@@ -917,12 +894,12 @@ for (item of buttons) {
         }
        
         }
-        else if (buttonText == 'AC') {
+        else if (buttonText == 'C') {
             screenValue = "";
             calc.value='';
             screen.value = screenValue;
         }
-        else if (buttonText == 'C') {
+        else if (buttonText == 'AC') {
             screenValue = str;
             calc.value='';
             screen.value = screenValue;
@@ -1004,7 +981,7 @@ for (item of buttons) {
 </div>
     <div class="footer-text"><center>Info Support Marketing</center>
         <center>Terms of Use &nbsp Privacy Policy</center>
-        <center>&#169 2022 VoiceCalc</center>
+        <center>&#169 2020 iCONverter</center>
     </div>
 </div>
 </body>
